@@ -2,6 +2,7 @@ package com.example.restservice;
 
 import java.util.concurrent.atomic.AtomicLong;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,9 +25,7 @@ import sun.misc.BASE64Decoder;
 
 @RestController
 public class ServiceImplController {
-
-	@GetMapping("/os")
-
+	@GetMapping("/OsName")
 	public String getOsName(){
         String os = System.getProperty("os.name");
         return os;
@@ -47,6 +46,7 @@ public class ServiceImplController {
 	   
         
     }
+    @CrossOrigin(origins = "*")
 	@GetMapping("/screenshot")
 	public String getScreenshot() {
         try{

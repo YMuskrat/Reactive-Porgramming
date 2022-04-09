@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <label for="interval">Get screenshot each (s): </label>
+    <input type="text" id="interval">
+    <input id="submit" type="submit" value="START"  >
+    <br><br>
+    <p>Image: </p>
+    <img src="n.png" id="image" style="width: 1190px; height: 615px;" class="aligncenter">
+
+    
+</body>
+<style>
+    .aligncenter {
+        text-align: center;
+    }
+    </style>
+<script src="https://unpkg.com/rxjs@^7/dist/bundles/rxjs.umd.min.js"></script> 
+
+
+<script src=" https://unpkg.com/@reactivex/rxjs@5.0.3/dist/global/Rx.js"></script> 
+<script src="js/node_modules/@akanass/rx-http-request/browser/index.js" type="application/javascript"></script>
+<script src="./js/consumer.js"></script>
+</html>
